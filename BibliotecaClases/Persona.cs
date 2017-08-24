@@ -8,8 +8,11 @@ namespace BibliotecaClases
 {
     public class Persona
     {
-        public string nombre;
-        public string apellido;
+        private string nombre;
+        private string apellido;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellido { get => apellido; set => apellido = value; }
 
         public Persona()
         {
@@ -22,7 +25,12 @@ namespace BibliotecaClases
             this.apellido = string.Empty;
         }
 
-
+        public String mostrarPersona()
+        {
+            string persona = ($"Nombre: {Nombre} - Apellido: {Apellido}");
+            Console.WriteLine($"Nombre: {Nombre} - Apellido: {Apellido}");
+            return persona;
+        }
 
         
     }
